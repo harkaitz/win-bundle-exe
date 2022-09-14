@@ -170,8 +170,6 @@ bundle_exe() {
     verbose "Creating ${o} ..."
     cat "${s}" "${t}.txt" "${t}.7z" > "${o}"
     chmod +x "${o}"
-    ## Print filename.
-    echo "${o}"
 }
 bundle_exe_show_variables() {
     printf '%-20s : %s\n'                     \
