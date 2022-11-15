@@ -1,13 +1,6 @@
-# SH-BUNDLE
+# BUNDLE-EXE
 
-Executable bundle generation utilities.
-
-## Dependencies
-
-- 7z
-- curl
-- wine
-- ImageMagick
+Dependencies: 7z, curl, wine, ImageMagick
 
 ## Help
 
