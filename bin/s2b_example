@@ -1,0 +1,16 @@
+#!/bin/sh -e
+##:
+#h: Usage: s2b_example ARGUMENTS...
+#h:
+#h: This is a sample script for s2b, it prints a message and quits. Build
+#h: a wrapper for this script with "s2b -eip s2b_example".
+##:
+s2b_example() {
+    echo "The example worked. $*"
+}
+if test @"${SCRNAME:-$(basename "$0")}" = @"s2b_example";then
+    case "${1}" in
+        -h|--help) sed -n 's/^ *#h: \{0,1\}//p' "$0";;
+        *)         s2b_example "$@"; exit 0;;
+    esac
+fi
